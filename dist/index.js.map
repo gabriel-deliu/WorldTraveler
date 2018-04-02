@@ -1,0 +1,1 @@
+{"version":3,"sources":["../server/index.js"],"names":[],"mappings":";;AAAA;;;;;;AAEA,wBAAS,gCAAT","file":"index.js","sourcesContent":["import writeMsg from './writeMsg';\n\nwriteMsg(\"PRODUCTION IS STILL WORKING!!!\");\n"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../server/writeMsg.js"],"names":["writeMsg","msg","console","log"],"mappings":";;;;;AAAA,IAAMA,WAAW,SAAXA,QAAW,CAACC,GAAD,EAAS;AACxBC,UAAQC,GAAR,CAAYF,GAAZ;AACD,CAFD;;kBAIeD,Q","file":"writeMsg.js","sourcesContent":["const writeMsg = (msg) => {\n  console.log(msg);\n};\n\nexport default writeMsg;\n"]}
