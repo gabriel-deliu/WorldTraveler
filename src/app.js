@@ -16,11 +16,13 @@ class TheWorld {
   }
 
   reset() {
+    //G: shouldn't the isDead flag be reset?
     this.state.traveler = [4, 4];
   }
 
   translateMove(moveInput) {
     let moveOutput = null;
+    //G: shouldn't the multi move case (eg: "3w") be considered as well?
     switch(moveInput.slice(-1)) {
       case "w" :
           let x;
@@ -64,6 +66,7 @@ class TheWorld {
       // Problems with this scope inside map loop
       var self = this;
       // Receiving array
+      //G: the if can be avoided if using _.flatten(args)
       if(Array.isArray(args[0])) {
         // Take first array element, ignore rest
         args = args[0];
@@ -82,6 +85,7 @@ class TheWorld {
         });
       } else {
         // Receving strings
+        //G: code seems to be similar to lines 75-82
         args.map(function(element) {
           const move = self.translateMove(element);
           self.state.traveler = self.state.traveler.map(function(val, i) {
@@ -95,6 +99,8 @@ class TheWorld {
         });
       }
 
+      //G: This check should occure after each move. Currently you can fly over goblins. 
+      //G: The check should be done via an iterator and without using JSON.stringify as string comparisons are expensive.
       if(JSON.stringify(self.state.goblins[0]) === JSON.stringify(self.state.traveler)
         || JSON.stringify(self.state.goblins[1]) === JSON.stringify(self.state.traveler)
         || JSON.stringify(self.state.goblins[2]) === JSON.stringify(self.state.traveler)) {
@@ -109,6 +115,7 @@ class TheWorld {
         // line is every line that will be printed
         let line = "";
           for(var j=0;j<this.state.grid[1];j++){
+            //G: this should be extracted to a function as it leads to duplicated code
             if((JSON.stringify(this.state.goblins[0]) === JSON.stringify([j, i]))
               || (JSON.stringify(this.state.goblins[1]) === JSON.stringify([j, i]))
               || (JSON.stringify(this.state.goblins[2]) === JSON.stringify([j, i]))) {
