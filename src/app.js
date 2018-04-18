@@ -125,10 +125,6 @@ class TheWorld {
         }
         console.log(line);
       }
-      console.log(this.state.goblins[0]);
-      console.log(this.state.goblins[1]);
-      console.log(this.state.goblins[2]);
-      console.log(this.state.traveler);
       console.log("D='Dead Traveler'");
       console.log("T='Traveler'");
       console.log("G='Goblin'");
