@@ -1,3 +1,13 @@
+
+To run tests please execute in command line the following:
+#node t
+
+To view program execution please execute in command line the following:
+#npm run build
+#node dist/index.js
+
+Thanks for tacking the time to view my code!
+
 # Lost Traveller
 
 ## The Exercise

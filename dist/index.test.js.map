@@ -1,1 +1,0 @@
-{"version":3,"sources":["../server/index.test.js"],"names":["test","expect","toBe"],"mappings":";;AAAAA,KAAK,QAAL,EAAe,YAAM;AACnBC,SAAO,IAAP,EAAaC,IAAb,CAAkB,IAAlB;AACD,CAFD","file":"index.test.js","sourcesContent":["test('sample', () => {\n  expect(true).toBe(true);\n});\n"]}
